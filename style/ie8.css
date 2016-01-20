@@ -1,0 +1,16 @@
+
+/*
+Style correction to be applied only to IE8
+*/
+
+/* zero padding and margins */
+img {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+/* h1 text not hidden on some pages */
+.header-logo {
+    text-indent: 200%;
+}

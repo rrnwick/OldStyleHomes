@@ -1,0 +1,643 @@
+/*
+    # Table of Contents
+
+- HTML5 Reset
+	- Normalize
+	- Box Sizing
+	- Float Clearing
+- Defaults
+	- Headings
+	- Objects / Images
+
+- Structure and Layout
+	- Site Containers
+	- Content Boxes / Columns
+
+- Site Header
+	- Logo / Title Area
+	- Navigation
+
+- Content Area
+
+- Sidebars
+
+- Site Footer
+
+- Media Queries
+	- Max-width: 700px
+*/
+
+
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+/* ## Normalize
+   ## - Preserves useful defaults, creates consistency across browsers
+
+   ## Readable compression used
+
+--------------------------------------------- */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{margin:0;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
+figure {margin: 0 0 0.5em 0;-webkit-margin-before: 0;-webkit-margin-after: 0.5em;-webkit-margin-start: 0;    -webkit-margin-end: 0;}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background-color:transparent}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:700}
+dfn{font-style:italic}
+h1{font-size:2em;margin:10px 0}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+/*figure{margin:1em 40px}*/
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],/* 1 */
+input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:700}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+
+
+/* ## Box Sizing
+---------------------------------------------
+see:
+https://css-tricks.com/box-sizing/
+https://css-tricks.com/almanac/properties/b/box-sizing/
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+*/
+
+*,
+input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ## Float Clearing
+----------------------------------------------*/
+/*
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+
+body {
+    background: url('./images/wood_bg.png');
+    color: #3c3c3c;
+    font-size: 100%;
+    font-size: 1.4em;
+    font-family: Raleway, Helvetica, sans-serif;
+}
+
+p {
+    text-align: left;
+    font-size: 0.75em;
+    color: #000000;
+}
+
+h1 {
+    font-size: 2em;
+    text-decoration: underline;
+    letter-spacing: -2px;
+    color: #2F6922;
+    font-family: Neuton, serif;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #2F6922;
+    font-family: Neuton, serif;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+    color: #6CBD4C;
+    font-family: Neuton, serif;
+}
+
+a {
+    font-size: 0.75em;
+    color: #2F6922;
+}
+
+a:active {
+    font-size: 0.75em;
+    color: #6CBD4C;
+}
+
+a:visited {
+    font-size: 0.75em;
+    color: #6CBD4C;
+}
+
+a:hover {
+    font-size: 0.75em;
+    color: #2F6922;
+    text-decoration: underline;
+}
+
+footer {
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+
+footer p {
+    font-size: 0.75em;
+}
+
+footer a {
+    font-size: 0.83em;
+    color: #000000;
+}
+
+footer a:active {
+    font-size: 0.83em;
+    color: #2F6922;
+}
+
+footer a:visited {
+    font-size: 0.83em;
+    color: #6CBD4C;
+}
+
+footer a:hover {
+    font-size: 0.83em;
+    color: #2F6922;
+    text-decoration: underline;
+}
+
+
+/* ## Headings
+----------------------------------------------*/
+
+aside h2 {
+    text-align: center;
+}
+
+/* ## Images / Objects
+----------------------------------------------*/
+
+/*Allow img to resize with fluid layout / responsive   */
+
+#awards img {
+    /* ensure element takes up whole line */
+    display: block;
+    /*centre element horizontal */
+    margin: 10px auto 10px;
+}
+
+/* float images left and right to allow text to flow
+around them, this website encloses most images inside
+the figure element and includes captions.
+Instead of floating individual images this will float the
+parent element, figure. */
+
+.figure-left {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.figure-left img {
+    padding-right: 10px;
+}
+
+.figure-right {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    float: right;
+}
+
+.figure-right img {
+    padding-left: 10px;
+}
+
+/* display smaller font size for captions */
+figcaption p{
+    font-size: 0.75em;
+    font-style: italic;
+    text-align: center;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    /* round corners in supported browsers
+    http://flauntyoursite.com/rounded-corners-for-photos-css-only-trick/
+    */
+
+    /*border:1px solid #f6f6f6;*/
+    /*-webkit-border-radius: 20px;*/
+    /*border-radius: 20px;*/
+}
+
+
+/* Code sourced from image map resources in online tafe materials,
+ modified with percentages applied to allow the image and hotspots
+ to resize with screen while maintaining relative location on image
+ */
+.imagemap {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.imagemap ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.imagemap a {
+    position: absolute;
+    display: block;
+    /* hotspot marker locations lime green with darker border */
+    background-color: #32cd32;
+    border: 2px solid #228b22;
+    width: 3.91%;
+    height: 5.87%;
+    text-decoration: none;
+}
+
+.imagemap .ground a {
+    top: 85.17%;
+    left: 9.77%;
+    /* make hotspot markers circular in supported browsers */
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.imagemap .wall a {
+    top: 47.72%;
+    left: 23.44%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.imagemap .meatlocker a {
+    top: 67.55%;
+    left: 35.16%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.imagemap .watertank a {
+    top: 70.48%;
+    left: 62.50%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.imagemap .chimney a {
+    top: 20.56%;
+    left: 88.87%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+/*------- Mouse Over style note on hotspots -----------------------
+
+Code taken from resoure materials and modified slightly to display
+note on either right or left side of hotspot, depending on imagemap
+location for best usability.
+
+*/
+
+.imagemap a .note-right {
+    position: absolute;
+    bottom: -3em;
+    width: 12em;
+    padding: 0.2em 0.5em;
+    background-color:#f6f6f6;
+    border: 1px solid;
+    text-align: center;
+    left: -1000em;
+    margin-left: -4em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+}
+
+.imagemap a:hover .note-right,
+.imagemap a:focus .note-right {
+    left: 6em;
+    z-index: 1;
+}
+
+.imagemap a .note-left {
+    position: absolute;
+    bottom: -3em;
+    width: 12em;
+    padding: 0.2em 0.5em;
+    background-color:#f6f6f6;
+    border: 1px solid;
+    text-align: center;
+    left: -1000em;
+    margin-left: -4em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+}
+
+.imagemap a:hover .note-left,
+.imagemap a:focus .note-left {
+    left: -8em;
+    z-index: 1;
+}
+
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Site Containers
+----------------------------------------------*/
+
+
+#site-container {
+    position: relative;
+    /*  relative allows #header_extras to move relative to screen
+    width but stay absolute positioned in this container */
+    margin: 0 auto;
+    /* Width set as per Wireframe specifications, 800 = 600+10+190 */
+    max-width: 800px;
+    padding: 0px;
+    background-color: #f6f6f6;
+}
+
+/* ## Content Boxes / Columns
+----------------------------------------------*/
+
+.main-col {
+    float: left;
+    width: 75%; /* Set Main content width to 600px at full width */
+}
+
+.side-col {
+    float: right;
+    /* Set side column width to 190px when full width page */
+    width: 23.75%;
+}
+
+
+/* # Site Header
+---------------------------------------------------------------------------------------------------- */
+/* ## Logo / Title Area
+----------------------------------------------*/
+
+/* pushes links for Skip To Content and Site Map to right
+side of page, at top */
+
+.web_access {
+    text-align: right;
+}
+
+.header-logo {
+    /* This replaces the main header text with a visual logo,
+    maintaining visibility of the text to assistive devices/software
+    for accessibility */
+    display: block;
+    width: 445px; /* pixel dimensions of logo image */
+    height: 152px;
+    background: url('../images/oldstyle_logo.png') no-repeat;
+    text-indent: 100%; /* move text off screen */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#header_extras {
+    position: absolute; /* allow element to sit at top right header*/
+    right: 10px;
+    top: 50px;
+    text-align: right;
+}
+
+/* ## Navigation
+----------------------------------------------*/
+/*
+The following navigation system uses inline-block instead
+of the previous float method that has been common in CSS
+until recently.
+
+*/
+
+nav {
+    margin: 0 auto;
+
+}
+
+ul#horizontal-nav {
+    /*remove the bullets from the dropdown ul as well*/
+    margin:0 auto;
+    padding:0;
+    list-style-type:none;
+    height:30px;
+    /* centres the list items horizontally */
+    text-align: center;
+
+}
+
+#horizontal-nav li {
+    display: inline-block;
+    /* closes the 4px gap created by the whitespace
+    between the html li tags, a inline-block downside
+    read more here:
+    https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+    */
+    margin-right: -4px;
+    position: relative;
+}
+
+#horizontal-nav li a{
+    display:block;
+    font-size: 1em;
+    line-height:30px;
+    text-align:center;
+    color: #6CBD4C;
+    text-decoration:none;
+    background-color:#f6f6f6;
+    padding-left:15px;
+    padding-right: 15px;
+}
+
+#horizontal-nav li a:hover{
+    color:#333333;
+    background-color: #ffffff;
+    border: 1px dashed #d3d3d3;
+}
+
+/* Style for current page/parent group in navigation menu */
+#horizontal-nav li a#selected {
+    color: #2F6922;
+    border: 1px dashed #4c4c4c;
+    text-decoration: underline;
+}
+
+/* # Content Area
+---------------------------------------------------------------------------------------------------- */
+
+.main-col article {
+    /* equivalent to 10px padding main content area */
+    padding: 0.625em;
+}
+
+.main-content {
+    /* as per wireframe specifications */
+    margin-top: 10px;
+}
+
+.main-content article {
+    /* reduce top padding to 0 so margin can be 10px
+    as per wireframe specification */
+    padding: 0 0.625em 0.625em 0.625em;
+}
+
+/* Contact details on contact page, list form without bullets
+margin to indent list slightly, line height to add vertical whitespace. */
+ul.contact-details {
+    list-style: none;
+    line-height: 1.75em;
+    margin-left: 3em;
+}
+
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+aside ul {
+    font-size: 0.75em;
+}
+
+aside figure img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+    /* round corners in supported browsers */
+    border:1px solid #f6f6f6;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+footer {
+    width:100%;
+    height: 30px;
+    margin: 2em 0; /* puts margin above footer to keep it separate from content */
+}
+
+footer p {
+    text-align: center;
+}
+
+
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Maximum Width: 700px
+----------------------------------------------*/
+
+
+@media only screen and (max-width: 700px) {
+/* Apply following styles when screen size smaller than 701px wide */
+    .main-col {
+        float: none;
+        width: 100%;
+    }
+
+    .side-col {
+        float: none;
+        width: 100%;
+    }
+
+    .header-logo {
+        display: block;
+        width: 280px;
+        height: 96px;
+        /*replace logo with smaller version for smaller screen size */
+        background: url('../images/oldstyle_logo_sm.png') no-repeat;
+        text-indent: -100%;
+        white-space: nowrap;
+    }
+
+    #header_extras {
+        position: relative;
+        top: 0px;
+        text-align: center;
+        margin-left: 3em;
+    }
+
+    nav {
+        /* add space above and below menu when screen smaller, prevents
+         wrapping from overlaying other elements */
+        margin: 1.25em auto 0.5em;
+    }
+
+    .image-right {
+        /* remove 10px padding from left as screen shrinks */
+        padding: 5px 5px 5px 5px;
+    }
+
+    .image-left {
+        /* remove 10px padding from right as screen shrinks */
+        padding: 5px 5px 5px 5px;
+    }
+
+    aside figure img {
+        max-width: 100%;
+        height: auto;
+        padding: 5px;
+        /* round corners in supported browsers,
+         larger border radius when page is single column*/
+        border:1px solid #f6f6f6;
+        -webkit-border-radius: 20px;
+        border-radius: 20px;
+    }
+
+
+}
