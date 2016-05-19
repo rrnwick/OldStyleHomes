@@ -429,12 +429,17 @@ location for best usability.
 /* ## Logo / Title Area
 ----------------------------------------------*/
 
-/* pushes links for Skip To Content and Site Map to right
-side of page, at top */
+/* hide accessibility links for visual browser display,
+    but maintain for screen reader, tabbing etc. */
 
 .web_access {
-    text-align: right;
-}
+    /*text-align: right;*/
+    clip: rect(1px, 1px, 1px, 1px);
+  	position: absolute !important;
+  	height: 1px;
+  	width: 1px;
+  	overflow: hidden;
+  }
 
 .header-logo {
     /* This replaces the main header text with a visual logo,
