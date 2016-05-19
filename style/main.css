@@ -237,10 +237,14 @@ Instead of floating individual images this will float the
 parent element, figure. */
 
 .figure-left {
-    max-width: 800px;
+    max-width: 400px;
     width: 100%;
     height: auto;
     float: left;
+}
+
+.figure-home {
+  max-width: 800px;
 }
 
 .figure-left img {
