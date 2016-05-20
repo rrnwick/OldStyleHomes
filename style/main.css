@@ -413,6 +413,12 @@ location for best usability.
     background-color: #f6f6f6;
 }
 
+.list-container {
+  display: flex;
+  justify-content: center;
+}
+
+
 /* ## Content Boxes / Columns
 ----------------------------------------------*/
 
