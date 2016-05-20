@@ -128,6 +128,7 @@ body {
     font-size: 100%;
     font-size: 1.4em;
     font-family: Raleway, Helvetica, sans-serif;
+    margin-top: -0.5em;
 }
 
 p {
@@ -349,13 +350,9 @@ img {
 
 /*------- Mouse Over style note on hotspots -----------------------
 
-Code taken from resoure materials and modified slightly to display
-note on either right or left side of hotspot, depending on imagemap
-location for best usability.
-
 */
 
-.imagemap a .note-right {
+.imagemap a .notes {
     position: absolute;
     bottom: -3em;
     width: 12em;
@@ -367,26 +364,16 @@ location for best usability.
     margin-left: -4em;
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
+}
+
+li.wall .notes {
+  width: 10em;
 }
 
 .imagemap a:hover .note-right,
 .imagemap a:focus .note-right {
     left: 6em;
     z-index: 1;
-}
-
-.imagemap a .note-left {
-    position: absolute;
-    bottom: -3em;
-    width: 12em;
-    padding: 0.2em 0.5em;
-    background-color:#f6f6f6;
-    border: 1px solid;
-    text-align: justify;
-    left: -1000em;
-    margin-left: -4em;
-    -moz-border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
 }
 
 .imagemap a:hover .note-left,
@@ -424,12 +411,11 @@ location for best usability.
 
 .main-col {
     float: left;
-    width: 75%; /* Set Main content width to 600px at full width */
+    width: 75%;
 }
 
 .side-col {
     float: right;
-    /* Set side column width to 190px when full width page */
     width: 23.75%;
 }
 
@@ -443,7 +429,6 @@ location for best usability.
     but maintain for screen reader, tabbing etc. */
 
 .web_access {
-    /*text-align: right;*/
     clip: rect(1px, 1px, 1px, 1px);
   	position: absolute !important;
   	height: 1px;
@@ -475,9 +460,7 @@ location for best usability.
 ----------------------------------------------*/
 /*
 The following navigation system uses inline-block instead
-of the previous float method that has been common in CSS
-until recently.
-
+of the previous float method that has been common in CSS.
 */
 
 nav {
@@ -486,12 +469,10 @@ nav {
 }
 
 ul#horizontal-nav {
-    /*remove the bullets from the dropdown ul as well*/
     margin:0 auto;
     padding:0;
     list-style-type:none;
     height:30px;
-    /* centres the list items horizontally */
     text-align: center;
 
 }
@@ -551,8 +532,7 @@ ul#horizontal-nav {
     padding: 0 0.625em 0.625em 0.625em;
 }
 
-/* Contact details on contact page, list form without bullets
-margin to indent list slightly, line height to add vertical whitespace. */
+/* Contact details on contact page */
 ul.contact-details {
     list-style: none;
     line-height: 1.75em;
@@ -655,4 +635,31 @@ footer p {
     }
 
 
+}
+
+/* ## Maximum Width: 590px
+----------------------------------------------*/
+
+
+@media only screen and (max-width: 590px) {
+/* Apply following styles when screen size smaller than 591px wide */
+.main-content {
+  margin-top: 2em;
+}
+
+ul.contact-details {
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+}
+
+/* ## Maximum Width: 300px
+----------------------------------------------*/
+
+@media only screen and (max-width: 300px) {
+/* Apply following styles when screen size smaller than 300px wide */
+.main-content {
+  margin-top: 3em;
+}
 }
