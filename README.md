@@ -6,6 +6,6 @@ In addition it also supports Internet Explorer 8+, including media queries for r
 
 It's not going to win any awards for design :-)
 
-[View OldStyle Homes](https://rrenwick.github.io/OldStyleHomes/)
+[View OldStyle Homes](https://rrnwick.github.io/OldStyleHomes/)
 
 ![Screenshot Showing Design](/images/screenshotdesign.png)
